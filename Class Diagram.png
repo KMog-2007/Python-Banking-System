@@ -1,0 +1,39 @@
+                         ┌─────────────────────────────┐
+                         │       <<abstract>>          │
+                         │          Account            │
+                         ├─────────────────────────────┤
+                         │ - _account_number           │
+                         │ - _name                     │
+                         │ - _balance                  │
+                         │ - _transactions             │
+                         ├─────────────────────────────┤
+                         │ + account_number            │
+                         │ + name                      │
+                         │ + balance                   │
+                         │ + deposit()                 │
+                         │ + withdraw()                │
+                         │ + show_transactions()      │
+                         │ + show_details()            │
+                         │ + account_type()            │
+                         └──────────────┬──────────────┘
+                                        │
+                         ┌──────────────┴──────────────┐
+                         │                             │
+                    Inheritance                   Inheritance
+                         │                             │
+                         ▼                             ▼
+              ┌────────────────────┐       ┌────────────────────┐
+              │  SavingsAccount    │       │  CurrentAccount    │
+              ├────────────────────┤       ├────────────────────┤
+              │ + account_type()   │       │ + account_type()   │
+              │ + add_interest()   │       │                    │
+              └────────────────────┘       └────────────────────┘
+
+
+              ┌──────────────────────────────────────┐
+              │             Main Functions           │
+              ├──────────────────────────────────────┤
+              │ create_account()                     │
+              │ find_account()                       │
+              │ main()                               │
+              └──────────────────────────────────────┘
