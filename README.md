@@ -89,30 +89,6 @@ python-banking-system/
 | `README.md` | Project documentation |
 | `class_diagram.png` | Class architecture diagram |
 
-## ▶️ How to Run
-
-### Step 1: Install Python
-
-Make sure Python 3 is installed on your computer.
-
-### Step 2: Clone the Repository
-
-```bash
-git clone <your-github-repository-link>
-```
-
-### Step 3: Open the Project Folder
-
-```bash
-cd python-banking-system
-```
-
-### Step 4: Run the Program
-
-```bash
-python banking_system.py
-```
-
 ## 💡 Example Operations
 
 ```text
