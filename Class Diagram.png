@@ -1,39 +1,42 @@
-                         ┌─────────────────────────────┐
-                         │       <<abstract>>          │
-                         │          Account            │
-                         ├─────────────────────────────┤
-                         │ - _account_number           │
-                         │ - _name                     │
-                         │ - _balance                  │
-                         │ - _transactions             │
-                         ├─────────────────────────────┤
-                         │ + account_number            │
-                         │ + name                      │
-                         │ + balance                   │
-                         │ + deposit()                 │
-                         │ + withdraw()                │
-                         │ + show_transactions()      │
-                         │ + show_details()            │
-                         │ + account_type()            │
-                         └──────────────┬──────────────┘
-                                        │
-                         ┌──────────────┴──────────────┐
-                         │                             │
-                    Inheritance                   Inheritance
-                         │                             │
-                         ▼                             ▼
-              ┌────────────────────┐       ┌────────────────────┐
-              │  SavingsAccount    │       │  CurrentAccount    │
-              ├────────────────────┤       ├────────────────────┤
-              │ + account_type()   │       │ + account_type()   │
-              │ + add_interest()   │       │                    │
-              └────────────────────┘       └────────────────────┘
+                         ┌──────────────────────────────┐
+                         │        <<abstract>>          │
+                         │           Account            │
+                         ├──────────────────────────────┤
+                         │ - _account_number             │
+                         │ - _name                       │
+                         │ - _balance                    │
+                         │ - _transactions               │
+                         ├──────────────────────────────┤
+                         │ + account_number              │
+                         │ + name                        │
+                         │ + balance                     │
+                         │ + deposit(amount)             │
+                         │ + withdraw(amount)            │
+                         │ + show_transactions()         │
+                         │ + show_details()              │
+                         │ - _add_transaction(message)   │
+                         │ + account_type()              │
+                         └───────────────┬──────────────┘
+                                         │
+                          ┌──────────────┴──────────────┐
+                          │                             │
+                       inherits                      inherits
+                          │                             │
+                          ▼                             ▼
+              ┌──────────────────────┐      ┌──────────────────────┐
+              │   SavingsAccount     │      │    CurrentAccount    │
+              ├──────────────────────┤      ├──────────────────────┤
+              │                      │      │                      │
+              ├──────────────────────┤      ├──────────────────────┤
+              │ + account_type()     │      │ + account_type()     │
+              │ + add_interest()     │      │                      │
+              └──────────────────────┘      └──────────────────────┘
 
 
-              ┌──────────────────────────────────────┐
-              │             Main Functions           │
-              ├──────────────────────────────────────┤
-              │ create_account()                     │
-              │ find_account()                       │
-              │ main()                               │
-              └──────────────────────────────────────┘
+        ┌────────────────────────────────────────────────┐
+        │                 Application Functions           │
+        ├────────────────────────────────────────────────┤
+        │ + create_account(accounts)                      │
+        │ + find_account(accounts)                        │
+        │ + main()                                        │
+        └────────────────────────────────────────────────┘
